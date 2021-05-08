@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, b {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section{
+	display: block;
+}
+/* VIDEO*/
+#video{
+	width: 100%;
+	
+}
+
+/* WORK PROFFESIONS*/
+#work_proc{
+	background: #e0e0e0;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	align-items: baseline;
+    padding: 100px 0;
+}
+.work_proc_item{
+	width: 25%;
+	text-align: center;
+}
+.work_proc_item > img{
+	width: 50px;
+	display: block;
+	margin: 50px auto 20px auto;
+}
+/* TESTIMONIALS*/
+
+#testimonials{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+	padding: 100px 15% 0px ;
+	text-align: center;
+	color: white;
+	background-color: #10C9C3;
+}
+ul {
+    list-style: none;
+	margin-right:100px;
+}
+#testimonials ul {
+
+    margin: 100px auto;
+    height: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+#testimonials ul li {
+    border-radius: 8px;
+    margin-left: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.grey_dot {
+	opacity: 0.5;
+	width: 8px;
+    height: 8px;
+	border-radius: 8px;
+}
+.white_dot {
+	width: 10px;
+    height: 10px;
+	border-radius: 8px;
+}
+
+/* CLIENTS*/
+
+.clients{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.clients > img {
+	margin:100px;
+}
+
+/* NEED A PROJECT CONTACT*/
+
+#contact{
+	background: #e0e0e0;
+	text-align: center;
+	padding: 100px;
+}
+#contact > p{
+	width: calc(40% + 80px);
+	margin: auto;
+}
+form{
+	display: block;
+}
+
+input{
+	border-width: 0px;
+	padding: 10px;
+}
+button{
+	border-width: 0px;
+	padding: 20px;
+	margin: 20px;
+	background-color: #10C9C3;
+	color: white;
+}
+#name,#email{
+	width: 20%;
+	margin: 20px;
+}
+#title{
+	width: calc(40% + 65px);
+	margin: 20px;
+}
+#comment{
+	width: calc(40% + 65px);
+	margin: 20px;
+	padding: 10px;
+}
+/* FOOTER*/
+
+footer{
+	background-color: #1f1f1f; /*#141414 main color but its too dark*/
+	min-height: 256px;
+	
+}
+.container{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-top: 80px;
+	margin:auto;
+}
+.footer_content{
+	color: grey;
+	flex-grow: 2;
+	
+}
+.footer_content > b {
+    color: white;
+}
+.footer_content > a {
+	color: grey;
+	text-decoration: none;
+	display: block;
+}
+
