@@ -3,36 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>Onepager</title>
+  <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header id="logo" alt="logo">
+	<header alt="logo">
 		<nav>
-			<a href="">HOME</a>
-			<a href="#about">ABOUT</a>
-			<a href="">WORK</a>
-			<a href="">PROCESS</a>
-			<a href="">SERVICES</a>
-			<a href="#testimonials">TESTIMONIALS</a>
-			<a href="">CONTACT</a>
+			<div id="nav_spacing2">
+				<img src="assets/img/logo.png" alt="logo">
+				<img id="burger" src="assets/icon/Hamburger_icon.svg">
+				<div id="nav_spacing">
+					<a href="index.html" class="nav-btn">HOME</a>
+					<a href="#about" class="nav-btn">ABOUT</a>
+					<a href="#products" class="nav-btn">WORK</a>
+					<a href="#video" class="nav-btn">PROCESS</a>
+					<a href="#work_proc" class="nav-btn">SERVICES</a>
+					<a href="#testimonials" class="nav-btn">TESTIMONIALS</a>
+					<a href="#contact" class="nav-btn">CONTACT</a>
+				</div>
+			</div>
 		</nav>
 	</header>
-	<section id="banner"></section>
-	<section id="about"></section>
-	<section id="pro_skills"></section>
-	<section id="stats"></section>
-	<section id="products"></section>
+	<section id="banner">
+		<div id="banner_spacing">
+			<h1>We Design and Develop</h1>
+			 <br>
+			<p>We are a bew design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps.</p>
+			<a href="#contact" class="submit">CONTACT US</a>
+		</div>
+	</section>
+	<section id="about">
+		<div class="about_us"><h2>About Us</h2>
+			<p>Divide have don't man wherein air fourth. Own itself make have night won't make. A you under Seed appear which good give. Own give air without fowl moveth dry first heaven fruit, dominion she'd won't very all.</p>
+			<img src="assets/img/signature.png" alt="signature">
+		</div>
+	</section>
+	<section id="pro_skills">
+		<div id="pro_spacing">
+			<h2>Professional Skills</h2>
+	
+			<b>UI/UX DESIGN <span class="percentage">75%</span></b> <br>
+			<div class="bar-shadow">
+				<div class="progress-bar" style="width: 75%"></div>
+			</div>
+	
+			<b>WEB DEVELOPEMENT <span class="percentage">90%</span></b><br>
+			<div class="bar-shadow">
+				<div class="progress-bar" style="width: 90%"></div>
+			</div>
+	
+			<b>MARKETING <span class="percentage">65%</span></b>
+			<div class="bar-shadow">
+				<div class="progress-bar" style="width: 65%"></div>
+			</div>
+		</div>
+
+	</section>
+	<section id="stats">
+		<div class="stat_spacing">
+			<img src="assets/icons/portfolio.svg" alt="portfolio"/>
+			<div class="stats_item">
+				<b>548</b>
+				<p>PROJECTS COMPLETED</p>
+			</div>
+		</div>
+		<div class="stat_spacing">
+			<img src="assets/icons/clock.svg" alt="clock"/>
+			<div class="stats_item">
+				<b>548</b>
+				<p>PROJECTS COMPLETED</p>
+			</div>
+		</div>
+		<div class="stat_spacing">
+			<img src="assets/icons/star-white.svg" alt="star"/>
+			<div class="stats_item">
+				<b>548</b>
+				<p>PROJECTS COMPLETED</p>
+			</div>
+		</div>
+		<div class="stat_spacing">
+			<img src="assets/icons/like.svg" alt="heart"/>
+			<div class="stats_item">
+				<b>548</b>
+				<p>PROJECTS COMPLETED</p>
+			</div>
+		</div>
+	</section>
+	<!--<section class="products">
+		<div class="products_row1">
+			<ul>
+				<a href ><li ><div></div>></li></a>
+				<a href ><li ><div></div>></li></a>
+				<a href ><li ><div></div>></li></a>
+				<a href ><li ><div></div>></li></a>
+			</ul>
+			
+		</div>
+		<div class="products_row1"></div>
+			<img src="assets/img/5.jpg" alt="shoes" />
+			<img src="assets/img/6.jpg" alt="sack" />
+			<img src="assets/img/7.jpg" alt="bottle" />
+			<img src="assets/img/8.jpg" alt="cupcake" />
+		</div>
+	</section> fuck this scaling leave it for last..-->
+	<a><div class="products_load"> LOAD MORE WORK </div></a>
 	<section id="video">
-		<div class="content">
+		<div id="content">
 			<h2>Our Work Process</h2>
 			<p>Was years it seasons was there form he in in them together over that, third sixth gathered female creeping bearing behold years.<p>
-			<video width="100%" min-height="500" controls>
+		</div>
+			<video id="video_player" controls>
 			<source src="assets/video/kek.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 			</video>
-		</div>
+		
 	</section>
 	<section id="work_proc">
 		<div class="work_proc_item">
@@ -109,7 +195,7 @@
 			<br>
 			<input id="comment" type="text" name="comment" placeholder="Your Comment">
 			<br>
-			<button id="submit" type="submit">SEND MESSAGE</button>
+			<button class="submit" type="submit">SEND MESSAGE</button>
 		</form>
 	</section>
 	<footer>
