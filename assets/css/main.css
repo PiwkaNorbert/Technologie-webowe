@@ -48,8 +48,11 @@ nav {
 	font-size: 12px;
 }
 
-.nav-btn:hover, .nav-btn:nth-of-type(1) {
+.nav-btn:hover, .nav-btn:nth-of-type(1){
     color: #10C9C3;
+}
+.nav-btn:nth-of-type(1):hover{
+	color: black;
 }
 /*BANNER*/
 #banner {
@@ -169,7 +172,7 @@ nav {
 /* PRODUCTS*/
 
 
-#products > img{
+#products{
 	
 	
 	height: 333px;
@@ -180,7 +183,12 @@ nav {
 	padding: 0px 50px;
 
 }
-
+.products_row1{
+	height: 30vh;
+}
+.products_row2{
+	height: 30vh;
+}
 .products_load{
 	display: flex;
 	align-items: baseline;
@@ -197,7 +205,6 @@ nav {
 
 }
 .products > img {
-
 
 	width: 100%;
 }
@@ -340,6 +347,9 @@ input{
 .submit:hover{
 	text-decoration: none;
 	opacity: 0.9;
+	color: black;
+	transition: 0.2s;
+	font-weight: bold;
 }
 
 #name,#email{
