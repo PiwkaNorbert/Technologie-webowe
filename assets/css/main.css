@@ -86,15 +86,16 @@ nav > ul > li > a:nth-child(1):hover{
 	z-index: 1;
 	top: 1.7em;
 	right: 5px;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: white;
 	border-radius: 10px;
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding: 50px 0px 20px;
+	text-align: center;
   }
   
   .sidepanel a {
-	padding: 8px 8px 8px 32px;
+	padding: 8px 8px 8px 8px;
 	text-decoration: none;
 	font-size: 25px;
 	color: #111;
@@ -114,6 +115,13 @@ nav > ul > li > a:nth-child(1):hover{
   }
   
   .openbtn {
+	font-size: 30px;
+	cursor: pointer;
+	color: black;
+	background-color: Transparent;
+	border: none;
+  }
+  .closebtn {
 	font-size: 30px;
 	cursor: pointer;
 	color: black;
@@ -158,8 +166,9 @@ nav > ul > li > a:nth-child(1):hover{
     background: #10C9C3;
     padding: 20px 40px;
 }
+
 /* ABOUT US*/
-#about{
+#about-us{
 	margin: auto;
 	background: white;
 	display: flex;
@@ -168,15 +177,13 @@ nav > ul > li > a:nth-child(1):hover{
 	align-items: baseline;
 	justify-content: center;
 	text-align: center;
-	
-}
-.about-us > p{
-	font-weight: 1000;
-}
-.about-us{
 	width: 60%;
 	
 }
+#about-us > p{
+	font-weight: 1000;
+}
+
 /* PROFESSION SKILLS*/
 #pro_skills{
 	
@@ -274,14 +281,14 @@ nav > ul > li > a:nth-child(1):hover{
 	padding: 0px;
 }
 
-.products-grid{
+#products-grid{
 	display: inline-flex;
 	grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
 	grid-column-gap: 0px;
 	margin: 0px;
 	padding: 0px;
 }
-.products-grid > .img{
+#products-grid > .img{
 	height: 30vh;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -293,17 +300,18 @@ nav > ul > li > a:nth-child(1):hover{
 	justify-content: center;
 	text-align: center;
 
-	transition: all 0.1s ease-in;
+	transition:  0.1s ease;
 
 }
-.products-grid > .img:hover{
+#products-grid > .img:hover{
 	
 	transform: scale(0.98);
 	cursor: pointer;
-	
+	background: url("../icons/eye-regular.svg") no-repeat center rgba(126, 126, 126, 1);
+	background-size: 20%;	
 }
 @media all and (min-width: 40em) {
-    .products-grid {
+    #products-grid {
         display: grid;
     }
 }
@@ -332,17 +340,10 @@ nav > ul > li > a:nth-child(1):hover{
 .img:nth-child(8){
 	background-image: url("../img/8.jpg");
 }
-.prod-hover {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: url("../icon/eye-outline.svg") no-repeat center #808080a8);
-	filter: brightness(50%);
-    
-}
 .load-more{
 	text-decoration: none;
 	color: black;
+
 }
 .products_load{
 	display: flex;
@@ -367,21 +368,31 @@ nav > ul > li > a:nth-child(1):hover{
 	width: calc(40% + 65px);
 	margin: auto;
 	padding: 100px 0px 0px;
-	
+	position: relative;
 }
 #video_player{
-
+	min-width: 200px !important;
 	height: 80%;
 	margin: auto;
 	padding-bottom: 100px;
 	display: flex;
     flex-wrap: wrap;
 	justify-content: center;
+	
+	
 }
 #video-container{
+	overflow: hidden;
 	position: relative;
 }
-
+#play-button {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: calc(40% - 50px);
+    left: calc(50% - 50px);
+    cursor: pointer;
+}
 #shadow, #ellipse, #arrow {
     position: absolute;
     left: 0;
@@ -424,16 +435,19 @@ nav > ul > li > a:nth-child(1):hover{
 }
 
 /* TESTIMONIALS*/
-
 #testimonials{
+	background-color: #10C9C3;
+	text-align: center;
+	margin: auto;
+}
+#testimonial-content{
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	margin: auto;
 	padding: 100px 50px 0px ;
 	color: white;
-	text-align: center;
-	background-color: #10C9C3;
 }
 
 #testimonials ul {
@@ -465,7 +479,21 @@ nav > ul > li > a:nth-child(1):hover{
     height: 10px;
 	border-radius: 8px;
 }
-
+@media only screen and (min-width: 1367px){
+	#testimonial-content{
+		width: calc(50% - 100px);
+	}
+}
+@media only screen and (max-width: 1366px){
+	#testimonial-content{
+		width: calc(80% - 100px);
+	}
+}
+@media only screen and (max-width: 968px){
+	#testimonial-content{
+		width: calc(100% - 100px);
+	}
+}
 /* CLIENTS*/
 
 #clients{
@@ -499,9 +527,9 @@ nav > ul > li > a:nth-child(1):hover{
 	padding: 100px 50px;
 	justify-content: center;
 }
-#contact > p{
-	width: calc(40% + 80px);
-	margin: auto;
+#dumb-solution-xD{
+	text-align: center;
+	margin:auto;
 }
 form{
 	display: block;
@@ -597,15 +625,52 @@ input{
 	justify-content: space-between;
 	}
 }
-
-@media(max-width:639px){
-	.img, .products-grid{
+@media only screen and (max-width: 968px){
+	#banner_spacing{
+		margin: 10% auto 0px;
+		text-align: center;
+		align-items: center;
+		width: calc(100% - 100px);
+	}
+}
+@media only screen and (max-width: 968px){
+	#banner{
+		min-height: 550px;
+	}
+}
+@media only screen and (max-width: 1366px){
+	#about-us{
+		width: calc(80% - 100px);
+	}
+}
+@media only screen and (max-width: 968px){
+	#about-us{
+		width: calc(100% - 100px);
+	}
+}
+@media only screen and (max-width: 1366px){
+	#email, #name, #title, #comment, #dumb-solution-xD{
+		width: calc(80% - 100px);
+	}
+}
+@media only screen and (max-width: 660px){
+	#email, #name, #title, #comment, #dumb-solution-xD{
+		width: calc(100% - 100px);
+	}
+}
+@media only screen and (min-width: 1367px){
+	#dumb-solution-xD{
+		width: calc(50% - 100px);
+	}
+}
+@media only screen and (max-width:968px){
+	.img, #products-grid{
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
 	}
 }
-@media (max-width: 850px){
+@media only screen and (max-width: 968px){
     #work_proc {
 		align-items: center;
 		justify-content: center;
@@ -615,7 +680,7 @@ input{
 		text-align: center;
     }
 }
-@media (max-width: 850px){
+@media only screen and (max-width: 968px){
     .clients {
 		width: 100%;
 		align-items: center;
@@ -624,22 +689,19 @@ input{
 		flex-wrap: wrap;
     }
 }
-@media (max-width: 323px){
-	#name,#email{
-		width: calc(40% + 65px);
-	}
-}
-@media (max-width: 850px){
+
+@media only screen and (max-width: 968px){
 	.submit, .submit > p{
 		font-size: .8rem;
 	}
 }
-@media (max-width: 850px) {
+@media only screen and (max-width: 968px) {
     .footer-container, .footer-content{
 
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
 		text-align: center;
+		font-size: 1.1em;
     }
 }

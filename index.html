@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     <link rel="stylesheet" href="assets/css/main.css">
-	<script src="assets/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet">
@@ -21,18 +20,18 @@
 			<ul id="nav-bar">
 				<li><a href="#banner" class="nav-btn">HOME</a></li>
 				<li><a href="#about" >ABOUT</a></li>
-				<li><a href="#work" >WORK</a></li>
-				<li><a href="#products">PROCESS</a></li>
+				<li><a href="#products" >WORK</a></li>
+				<li><a href="#video">PROCESS</a></li>
 				<li><a href="#work_proc">SERVICES</a></li>
 				<li><a href="#testimonials">TESTIMONIALS</a></li>
 				<li><a href="#contact">CONTACT</a></li>
 			</ul>
 			<div id="mySidepanel" class="sidepanel">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">☰</a>
 				<a href="#banner" >HOME</a>
 				<a href="#about" >ABOUT</a>
-				<a href="#work" >WORK</a>
-				<a href="#products">PROCESS</a>
+				<a href="#products" >WORK</a>
+				<a href="#video">PROCESS</a>
 				<a href="#work_proc">SERVICES</a>
 				<a href="#testimonials">TESTIMONIALS</a>
 				<a href="#contact">CONTACT</a>
@@ -50,7 +49,8 @@
 		</div>
 	</section>
 	<section id="about">
-		<div class="about-us"><h2>About Us</h2>
+		<div id="about-us">
+			<h2>About Us</h2>
 			<p>Divide have don't man wherein air fourth. Own itself make have night won't make. A you under Seed appear which good give. Own give air without fowl moveth dry first heaven fruit, dominion she'd won't very all.</p><br/>
 			<img src="assets/img/signature.png" alt="signature">
 		</div>
@@ -102,9 +102,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="products">
-		<div class="products-grid">
-			<div class="img"><div class="prod-hover"></div></div>
+	<section id="products">
+		<div id="products-grid">
+			<div class="img"></div>
 			<div class="img"></div>
 			<div class="img"></div>
 			<div class="img"></div>
@@ -121,11 +121,10 @@
 			<p>Was years it seasons was there form he in in them together over that, third sixth gathered female creeping bearing behold years.<p>
 		</div>
 		<div id="video-container">
-			<video id="video_player" controls>
+			<video id="video_player">
 			<source src="assets/video/kek.mp4" type="video/mp4">
-			Your browser does not support the video tag.
 			</video>
-			<div id="play-button" onclick="playVideo()" style="display: block;">
+			<div id="play-button" onclick="playPause()" style="display: block;">
 				<img id="shadow" src="assets/img/shadow.png">
 				<img id="ellipse" src="assets/img/ellipse.png">
 				<img id="arrow" src="assets/img/arrow.png" alt="play button">
@@ -175,7 +174,7 @@
 		</div>
 	</section>
 	<section id="testimonials">
-		<div>
+		<div id="testimonial-content">
 			<h2>" Outstanding job and exceedd all expectations. It was a pleasure to work with them on a sizable first project and am looking forward to start the next one asap."</h2>
 			<p>MICHAEL HOPKINS</p>
 			<ul>
@@ -197,18 +196,21 @@
 		</div>		
 	</section>
 	<section id="contact">
-		<h2>Need a Project</h2>
-		<p>Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.<p>
-		<form>
-			<input id="name" type="text" name="name" placeholder="Your Name">
-			<input id="email" type="text" name="email" placeholder="Your Email">
+		
+			<h2>Need a Project</h2>
+			<p id="dumb-solution-xD">Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.</p>
 			<br>
-			<input id="title" type="text" name="title" placeholder="Your Title">
-			<br>
-			<input id="comment" type="text" name="comment" placeholder="Your Comment">
-			<br>
-			<button class="submit" type="submit"><p>SEND MESSAGE</p></button>
-		</form>
+			<form id="form-container">
+				<input id="name" type="text" name="name" placeholder="Your Name">
+				<input id="email" type="text" name="email" placeholder="Your Email">
+				<br>
+				<input id="title" type="text" name="title" placeholder="Your Title">
+				<br>
+				<input id="comment" type="text" name="comment" placeholder="Your Comment">
+				<br>
+				<button class="submit" type="submit"><p>SEND MESSAGE</p></button>
+			</form>
+
 	</section>
 	<footer>
 		<div class="footer-container">
@@ -239,15 +241,33 @@
 			</div>
 		</div>
 	</footer>
+	<script src="assets/js/slider.js"></script>
+
 	<script>
 		function openNav() {
-		  document.getElementById("mySidepanel").style.width = "250px";
-		}
-		
-		function closeNav() {
-		  document.getElementById("mySidepanel").style.width = "0";
-		}
-		</script>
+			document.getElementById("mySidepanel").style.width = "250px";
+			}
+
+			function closeNav() {
+				document.getElementById("mySidepanel").style.width = "0";
+			}
+
+			var myVideo = document.getElementById("video_player");
+			var btn = document.getElementById("play-button");
+
+			function playPause() {
+				btn.style.display = 'none';
+				if (myVideo.paused)
+					myVideo.play();
+			}
+			document.getElementById("video_player").addEventListener('click', () => {
+				myVideo.pause();
+				btn.style.display = 'block';
+			});
+				document.getElementById("video_player").addEventListener('ended', () => {
+				btn.style.display = 'block';
+			});
+	</script>
 </body>
 </html>
 
