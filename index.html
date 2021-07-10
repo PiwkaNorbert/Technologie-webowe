@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Onepager</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     <link rel="stylesheet" href="assets/css/main.css">
 	<script src="assets/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 	
 	<section id="banner">
-		<header alt="logo">
-			<nav>
-				<div id="nav_spacing2">
-					<img src="assets/img/logo.png" alt="logo">
-					<div id="nav_spacing">
-						<a href="index.html" class="nav-btn">HOME</a>
-						<a href="#about" class="nav-btn">ABOUT</a>
-						<a href="#products" class="nav-btn">WORK</a>
-						<a href="#video" class="nav-btn">PROCESS</a>
-						<a href="#work_proc" class="nav-btn">SERVICES</a>
-						<a href="#testimonials" class="nav-btn">TESTIMONIALS</a>
-						<a href="#contact" class="nav-btn">CONTACT</a>
-					</div>
-				</div>
+		<nav class="">
+			<div class="logo-img">
+				<img src="assets/img/logo.png" alt="logo"/>
+			</div>
+			<ul id="nav-bar">
+				<li><a href="#banner" class="nav-btn">HOME</a></li>
+				<li><a href="#about" >ABOUT</a></li>
+				<li><a href="#work" >WORK</a></li>
+				<li><a href="#products">PROCESS</a></li>
+				<li><a href="#work_proc">SERVICES</a></li>
+				<li><a href="#testimonials">TESTIMONIALS</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="#banner" >HOME</a>
+				<a href="#about" >ABOUT</a>
+				<a href="#work" >WORK</a>
+				<a href="#products">PROCESS</a>
+				<a href="#work_proc">SERVICES</a>
+				<a href="#testimonials">TESTIMONIALS</a>
+				<a href="#contact">CONTACT</a>
+			</div>
+			<button class="openbtn" onclick="openNav()">
+				☰
+			</button>
 		</nav>
-		
-		</header>
 	
 		<div id="banner_spacing">
 			<h1>We Design and Develop</h1>
@@ -92,16 +104,14 @@
 	</section>
 	<section class="products">
 		<div class="products-grid">
-			
-			<div class="img1" alt="shoes"></div>
-			<div class="img2" alt="shoes"></div>
-			<div class="img3" alt="shoes"></div>
-			<div class="img4" alt="shoes"></div>
-			<div class="img5" alt="shoes" ></div>
-			<div class="img6" alt="sack"></div>
-			<div class="img7" alt="bottle"></div>
-			<div class="img8" alt="cupcake"></div>
-
+			<div class="img"><div class="prod-hover"></div></div>
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
 		</div>
 	</section>
 	<a href class="load-more"><div class="products_load"><p>LOAD MORE WORK</p></div></a>
@@ -163,8 +173,6 @@
 			<b>GRAPHIC DESIGN</b>
 			<p>Whales likeness hath, man kind for them air two won't</p>
 		</div>
-
-
 	</section>
 	<section id="testimonials">
 		<div>
@@ -180,13 +188,13 @@
 		<div></div>
 	</section>
 	<section id="clients">
-		
-			<img src="assets/img/1.png" alt="handmade" class="clients"/>
-			<img src="assets/img/2.png" alt="mountain" class="clients"/>
-			<img src="assets/img/3.png" alt="authentic" class="clients"/>
-			<img src="assets/img/4.png" alt="handmade" class="clients"/>
-			<img src="assets/img/5.png" alt="handmade" class="clients"/>
-				
+		<div id="clients-content">
+			<div class="clients"><img src="assets/img/1.png"/></div>
+			<div class="clients"><img src="assets/img/2.png"/></div>
+			<div class="clients"><img src="assets/img/3.png"/></div>
+			<div class="clients"><img src="assets/img/4.png"/></div>
+			<div class="clients"><img src="assets/img/5.png"/></div>
+		</div>		
 	</section>
 	<section id="contact">
 		<h2>Need a Project</h2>
@@ -203,27 +211,27 @@
 		</form>
 	</section>
 	<footer>
-		<div class="container">
-			<div class="footer_content">
+		<div class="footer-container">
+			<div class="footer-content">
 				<b>Piroll Design, Inc.</b>
 				<p>&#169; 2017 Piroll. All rights reserved.<br>Designed by robirurk.</p>
 			</div>
-			<div class="footer_content">
+			<div class="footer-content">
 				<p>hello@pirolltheme.com<br>+44 987 065 908</p>
 			</div>
-			<div class="footer_content">
+			<div class="footer-content">
 				<a href="">Projects</a>
 				<a href="">About</a>
 				<a href="">Services</a>
 				<a href="">Carreer</a>
 			</div>
-			<div class="footer_content">
+			<div class="footer-content">
 				<a href="">News</a>
 				<a href="">Events</a>
 				<a href="">Contact</a>
 				<a href="">Legals</a>
 			</div>
-			<div class="footer_content">
+			<div class="footer-content">
 				<a href="">Facebook</a>
 				<a href="">Twitter</a>
 				<a href="">Instagram</a>
@@ -231,6 +239,15 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		function openNav() {
+		  document.getElementById("mySidepanel").style.width = "250px";
+		}
+		
+		function closeNav() {
+		  document.getElementById("mySidepanel").style.width = "0";
+		}
+		</script>
 </body>
 </html>
 
